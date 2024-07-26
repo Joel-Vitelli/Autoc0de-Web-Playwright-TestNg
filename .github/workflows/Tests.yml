@@ -24,7 +24,7 @@ jobs:
         run: mvn verify
         
   ExecuteTests:
-
+    needs: SetupMaven
     runs-on: ubuntu-latest
 
     container:
