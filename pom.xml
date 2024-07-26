@@ -109,6 +109,14 @@
             <id>Grid</id>
             <properties>
                 <mode>Grid</mode>
+                <parallelMode>false</parallelMode>
+                <suiteXmlFile>testng-sequential.xml</suiteXmlFile>
+            </properties>
+        </profile>
+        <profile>
+            <id>GridParallel</id>
+            <properties>
+                <mode>Grid</mode>
                 <parallelMode>true</parallelMode>
                 <suiteXmlFile>testng-parallel.xml</suiteXmlFile>
             </properties>
@@ -119,6 +127,7 @@
             </activation>
             <properties>
                 <mode>Local</mode>
+                <parallelMode>false</parallelMode>
                 <suiteXmlFile>testng-crossbrowser.xml</suiteXmlFile>
                 <crossBrowser>true</crossBrowser>
             </properties>
@@ -129,6 +138,7 @@
             </activation>
             <properties>
                 <mode>Grid</mode>
+                <parallelMode>false</parallelMode>
                 <suiteXmlFile>testng-crossbrowser.xml</suiteXmlFile>
                 <crossBrowser>true</crossBrowser>
             </properties>
@@ -141,6 +151,7 @@
             </activation>
             <properties>
                 <mode>Local</mode>
+                <parallelMode>false</parallelMode>
                 <suiteXmlFile>testng-sequential.xml</suiteXmlFile>
                 <selectedBrowser>Chromium</selectedBrowser>
             </properties>
@@ -148,10 +159,10 @@
         <profile>
             <id>LocalFirefox</id>
             <activation>
-                <activeByDefault>true</activeByDefault>
             </activation>
             <properties>
                 <mode>Local</mode>
+                <parallelMode>false</parallelMode>
                 <suiteXmlFile>testng-sequential.xml</suiteXmlFile>
                 <selectedBrowser>Firefox</selectedBrowser>
             </properties>
@@ -159,10 +170,10 @@
         <profile>
             <id>LocalWebkit</id>
             <activation>
-                <activeByDefault>true</activeByDefault>
             </activation>
             <properties>
                 <mode>Local</mode>
+                <parallelMode>false</parallelMode>
                 <suiteXmlFile>testng-sequential.xml</suiteXmlFile>
                 <selectedBrowser>Webkit</selectedBrowser>
             </properties>
@@ -170,10 +181,10 @@
         <profile>
             <id>LocalChromiumParallel</id>
             <activation>
-                <activeByDefault>true</activeByDefault>
             </activation>
             <properties>
                 <mode>Local</mode>
+                <parallelMode>false</parallelMode>
                 <suiteXmlFile>testng-parallel.xml</suiteXmlFile>
                 <selectedBrowser>Chromium</selectedBrowser>
             </properties>
@@ -181,9 +192,9 @@
         <profile>
             <id>LocalFirefoxParallel</id>
             <activation>
-                <activeByDefault>true</activeByDefault>
             </activation>
             <properties>
+                <parallelMode>true</parallelMode>
                 <mode>Local</mode>
                 <suiteXmlFile>testng-parallel.xml</suiteXmlFile>
                 <selectedBrowser>Firefox</selectedBrowser>
@@ -192,10 +203,10 @@
         <profile>
             <id>LocalWebkitParallel</id>
             <activation>
-                <activeByDefault>true</activeByDefault>
             </activation>
             <properties>
                 <mode>Local</mode>
+                <parallelMode>true</parallelMode>
                 <suiteXmlFile>testng-parallel.xml</suiteXmlFile>
                 <selectedBrowser>Webkit</selectedBrowser>
             </properties>
@@ -203,10 +214,10 @@
         <profile>
             <id>GridChromium</id>
             <activation>
-                <activeByDefault>true</activeByDefault>
             </activation>
             <properties>
                 <mode>Grid</mode>
+                <parallelMode>false</parallelMode>
                 <suiteXmlFile>testng-sequential.xml</suiteXmlFile>
                 <selectedBrowser>Chromium</selectedBrowser>
             </properties>
@@ -214,10 +225,10 @@
         <profile>
             <id>GridFirefox</id>
             <activation>
-                <activeByDefault>true</activeByDefault>
             </activation>
             <properties>
                 <mode>Grid</mode>
+                <parallelMode>false</parallelMode>
                 <suiteXmlFile>testng-sequential.xml</suiteXmlFile>
                 <selectedBrowser>Firefox</selectedBrowser>
             </properties>
@@ -225,10 +236,10 @@
         <profile>
             <id>GridWebkit</id>
             <activation>
-                <activeByDefault>true</activeByDefault>
             </activation>
             <properties>
                 <mode>Grid</mode>
+                <parallelMode>false</parallelMode>
                 <suiteXmlFile>testng-sequential.xml</suiteXmlFile>
                 <selectedBrowser>Webkit</selectedBrowser>
             </properties>
@@ -236,10 +247,10 @@
         <profile>
             <id>GridChromiumParallel</id>
             <activation>
-                <activeByDefault>true</activeByDefault>
             </activation>
             <properties>
                 <mode>Grid</mode>
+                <parallelMode>true</parallelMode>
                 <suiteXmlFile>testng-parallel.xml</suiteXmlFile>
                 <selectedBrowser>Chromium</selectedBrowser>
             </properties>
@@ -247,21 +258,21 @@
         <profile>
             <id>GridFirefoxParallel</id>
             <activation>
-                <activeByDefault>true</activeByDefault>
             </activation>
             <properties>
                 <mode>Grid</mode>
-                <suiteXmlFile>testng-parallel.xmll</suiteXmlFile>
+                <parallelMode>true</parallelMode>
+                <suiteXmlFile>testng-parallel.xml</suiteXmlFile>
                 <selectedBrowser>Firefox</selectedBrowser>
             </properties>
         </profile>
         <profile>
             <id>GridWebkitParallel</id>
             <activation>
-                <activeByDefault>true</activeByDefault>
             </activation>
             <properties>
                 <mode>Grid</mode>
+                <parallelMode>true</parallelMode>
                 <suiteXmlFile>testng-parallel.xml</suiteXmlFile>
                 <selectedBrowser>Webkit</selectedBrowser>
             </properties>

@@ -142,10 +142,11 @@ In the ```Technological Stack``` section, we will find links that will take us t
 We have the possibility of executing our project using different Maven profiles to obtain specific results. The existing ones, their function and an example are detailed below.
 
 
-| Maven Profile         | Description                                                                                            | Example Maven Comand             |
+| Maven Profile         | Description                                                                                            | Example Maven Command            |
 |-----------------------|--------------------------------------------------------------------------------------------------------|----------------------------------|
 | Local (default)       | Run suite in sequential mode using the defined browser (Chromium by default)                           | mvn test -PLocal                 |
 | Grid                  | Run suite in sequential mode using the defined browser (Chromium by default) in headless mode          | mvn test -PGrid                  |
+| GridParallel          | Run suite in parallel mode using the defined browser (Chromium by default) in headless mode            | mvn test -PGridParallel          |
 | LocalCrossBrowser     | Run suite in sequential mode using the 3 browser engines (Chromium, Firefox, Webkit)                   | mvn test -PLocalCrossBrowser     |
 | GridCrossBrowser      | Run suite in sequential mode using the 3 browser engines (Chromium, Firefox, Webkit)  in headless mode | mvn test -PGridCrossBrowser      |
 | LocalChromium         | Run suite in sequential mode using Chromium as a browser engine                                        | mvn test -PLocalChromium         |
@@ -233,21 +234,21 @@ Example of the environment and system information
   <img src="img/report5.png"/>
 </p>
 
-## How to configurate Autoc0de for your web aplication
+## How to configure Autoc0de for your web application
 
 If you want to use this Framework to automate your own web application (of course), you only have to follow the steps that I leave you below. Let's go to that
 
 
-1. Open the ```pom.xml``` file that is in the root of the project, then, look for it property called ```<navigateUrl>https://underc0de.org/</navigateUrl>``` in the ```28 code line``` and replace that address with that of your web application
+1. Open the ```pom.xml``` file that is in the root of the project, then, look for its property called ```<navigateUrl>https://underc0de.org/</navigateUrl>``` in the ```28 code line``` and replace that address with that of your web application
 
 <p align="center">
   <img src="img/pom.png"/>
 </p>
 
 3. Now, add your features files in the folder ```features```, your step definition in the folder ```steps```, your locators in the folder ```locators``` your constants and functions in the folder ```pages```
-4. Add the @tag that you want to execute in the **pom.xml** file. In the ```29 code line``` and in the feature.file that you want.
+4. Add the @tag that you want to execute in the **pom.xml** file. In the ```29 code line``` and in the ```feature.file``` that you want.
 
-4. Done!, now run on a terminal the comand: ```mvn clean test``` (Or click on ```TestRunner.class``` ---> ```run```) and your project was run!
+4. Done!, now run on a terminal the command: ```mvn clean test``` (Or click on ```TestRunner.class``` ---> ```run```) and your project was run!
 
 # Enjoy!
 
@@ -278,7 +279,7 @@ If you want to use this Framework to automate your own web application (of cours
 [Google Chrome]: <https://www.google.com/intl/es-419/chrome/>
 
 ## 🚀 About Me
-I'm a full stack automation developer. I love support the comunity and create new tools for automation!
+I'm a full stack automation developer. I love support the community and create new tools for automation!
 
 
 
