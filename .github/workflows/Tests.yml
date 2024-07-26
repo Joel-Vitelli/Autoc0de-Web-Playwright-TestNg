@@ -4,6 +4,25 @@ on:
   workflow_dispatch:
 
 jobs:
+
+  SetupMaven:
+      runs-on: ubuntu-latest
+      container:
+        image: maven:amazoncorretto
+      steps:
+      - uses: actions/checkout@v3
+      - name: Verify Maven Version
+        run: mvn --version
+      - name: Cache Maven Dependencies
+        uses: actions/cache@v3
+        with:
+          path: ~/.m2/repository
+          key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
+          restore-keys: |
+            ${{ runner.os }}-maven-
+      - name: Build with Maven
+        run: mvn verify
+        
   ExecuteTests:
 
     runs-on: ubuntu-latest
